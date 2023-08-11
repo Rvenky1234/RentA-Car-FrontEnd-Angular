@@ -21,6 +21,12 @@ pipeline {
               '''
             }
         }
+       stage ('Install') {
+         sh "npm install"
+       }
+       stage ('Test') {
+         sh "npm run test-headless"
+       }
        stage ('Build') {
          steps {
            echo "Starting Build"
