@@ -21,5 +21,11 @@ pipeline {
               '''
             }
         }
+       stage ('Build') {
+         steps {
+           echo "Starting Build"
+           sh 'ng build'
+         }
+       }
      }
  }
